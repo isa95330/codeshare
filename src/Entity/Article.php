@@ -14,9 +14,6 @@ class Article
     private ?int $id = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $user = null;
-
-    #[ORM\Column(length: 50)]
     private ?string $title = null;
 
     #[ORM\Column(length: 255)]
@@ -25,21 +22,13 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $datePublished = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getUser(): ?string
-    {
-        return $this->user;
-    }
-
-    public function setUser(string $user): static
-    {
-        $this->user = $user;
-
-        return $this;
     }
 
     public function getTitle(): ?string
@@ -74,6 +63,18 @@ class Article
     public function setDatePublished(?\DateTimeInterface $datePublished): static
     {
         $this->datePublished = $datePublished;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }
