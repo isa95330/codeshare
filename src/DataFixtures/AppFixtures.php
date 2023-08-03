@@ -21,11 +21,13 @@ class AppFixtures extends Fixture
         $user = new User();
         $user->setEmail('hello@codeshare.fr');
         $user->setUsername('isa');
-        $user->setPassword('$2y$13$iDHNta/etBWZ4C/6o74q7OzZGcTzbLFXX1BV.HYkosu8.kW98j/BK'); // mdp = admin
+        $user->setPassword('$2y$13$rHV5n2B8dTGN8zGvjJlcE.ONyikgfh9R2V6ztLC.zBgT0/7ZGSjcy'); // mdp = admin
         $user->setCity("Paris");
         $user->setCountry("France");
-        $user->setProfilePhoto("image.jpeg")
-        ;
+        $user->setProfilePhoto("image.jpeg");
+        $user->setTitle('Développeuse');
+        $user->setDescription('Lorem ipsum');
+        
 
         // Enregistrement de l'utilisateur en base de données
         $manager->persist($user);
@@ -36,7 +38,7 @@ class AppFixtures extends Fixture
             $article->setTitle($faker->word(2))
             ->setContent($faker->text(200))
             ->setUser($user)
-            ->setDatePublished($faker->dateTimeBetween('-7 months'))
+            ->setDate($faker->dateTimeBetween('-7 months'))
         
             ;
 

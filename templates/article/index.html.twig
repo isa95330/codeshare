@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-{# {{app.user.username}} #}
+Profil de 
+{{app.user.username}}
 {% endblock %}
 
 {% block body %}
@@ -10,8 +11,8 @@
             <aside class="col-md-3 col-sm-12">
                 <img src="./assets/img/favicon.png" class="rounded-pill border d-none d-md-block d-lg-block"
                     width="300">
-                <h3 class="h2 mt-3">Codeshare <span class="rounded-pill bg-primary text-light h6 px-2">PRO</span></h3>
-                <p class="fs-6 text-muted text-uppercase">Fullstack Dev</p>
+                <h3 class="h2 mt-3">{{app.user.username}} <span class="rounded-pill bg-primary text-light h6 px-2">PRO</span></h3>
+                <p class="fs-6 text-muted text-uppercase">{{app.user.title}}</p>
                 <hr>
                 <p class="fs-5">À propos</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ut cumque quisquam
@@ -32,51 +33,17 @@
                     </div>
                 </div>
                 <div class="row gap-1 justify-content-center">
+
+
+                
                     <div class="border rounded col-30 m-1 p-2">
                         <h4>Titre</h4>
                         <p>Extrait</p>
                         <a href="./note.html" class="btn btn-dark">Voir</a>
                     </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
-                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
-                        <h4>Titre</h4>
-                        <p>Extrait</p>
-                        <a href="./note.html" class="btn btn-dark">Voir</a>
-                    </div>
+
+                  
+  
                 </div> <!-- Liste des notes -->
                 <div class="d-flex justify-content-center mt-3">
                     <nav aria-label="pagination">
