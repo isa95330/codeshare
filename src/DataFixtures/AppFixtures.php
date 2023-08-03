@@ -19,12 +19,12 @@ class AppFixtures extends Fixture
 
         // Création d'un utilisateur de test
         $user = new User();
-        $user->setEmail('hello@codexpress')
-        ->setUsername('isa')
-        ->setPassword('$2y$13$4UbZtgjJ2J0JSmY45CZs4uGbUbckq1R.N64JltRbz7JTVpuo3YJzi') // mdp = admin
-        ->setCity("Paris")
-        ->setCountry("France")
-        ->setProfilePhoto("image.jpeg")
+        $user->setEmail('hello@codeshare.fr');
+        $user->setUsername('isa');
+        $user->setPassword('$2y$13$iDHNta/etBWZ4C/6o74q7OzZGcTzbLFXX1BV.HYkosu8.kW98j/BK'); // mdp = admin
+        $user->setCity("Paris");
+        $user->setCountry("France");
+        $user->setProfilePhoto("image.jpeg")
         ;
 
         // Enregistrement de l'utilisateur en base de données

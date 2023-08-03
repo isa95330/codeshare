@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}{% endblock %}
+			Codeshare</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link rel="shortcut icon" href={{ asset ("images/favicon.png") }} type="image/x-icon">
+<link rel="stylesheet" href={{ asset ("css/main.css")}}
+	</head>
+	<header class="py-3 mb-4 border-bottom">
+		<div class="container d-flex flex-wrap justify-content-center">
+			<a href="./index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+				<img src={{ asset ("images/favicon.png") }} width="40">
+				<span class="fs-4">codeshare</span>
+			</a>
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link link-body-emphasis px-2">Connexion</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link link-body-emphasis px-2">Inscription</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<body>
+		{% block body %}{% endblock %}
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	</body>
 </html>

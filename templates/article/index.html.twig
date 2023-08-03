@@ -1,39 +1,126 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+{% block title %}
+{# {{app.user.username}} #}{% endblock %}
 
 {% block body %}
-    <h1>Article index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>DatePublished</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td>{{ article.title }}</td>
-                <td>{{ article.content }}</td>
-                <td>{{ article.datePublished }}</td>
-                <td>
-                    <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_article_new') }}">Create new</a>
+    <main class="container">
+        <section class="row gap-1">
+            <aside class="col-md-3 col-sm-12">
+                <img src="./assets/img/favicon.png" class="rounded-pill border d-none d-md-block d-lg-block"
+                    width="300">
+                <h3 class="h2 mt-3">Codeshare <span class="rounded-pill bg-primary text-light h6 px-2">PRO</span></h3>
+                <p class="fs-6 text-muted text-uppercase">Fullstack Dev</p>
+                <hr>
+                <p class="fs-5">À propos</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ut cumque quisquam
+                    reprehenderit nam provident velit quibusdam consectetur incidunt quo! Atque enim quod dolorum iste
+                    molestiae fugit beatae molestias explicabo.</p>
+                <p><i class="fas fa-map-marker-alt mx-1"></i>Paris, France</p>
+                <p><i class="fas fa-envelope mx-1"></i>hello@codeshare.fr</p>
+                <hr class="mb-5">
+                <footer class="text-center text-muted my-5">
+                    &copy; 2023 - Codeshare
+                </footer>
+            </aside> <!-- Sidebar -->
+            <div class="col-md-8 border rounded px-3 py-2 mb-3">
+                <div class="d-flex justify-content-between border-bottom mb-3">
+                    <h2>Mes notes</h2>
+                    <div>
+                        <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="row gap-1 justify-content-center">
+                    <div class="border rounded col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                    <div class="border rounded col-sm-12 col-30 m-1 p-2">
+                        <h4>Titre</h4>
+                        <p>Extrait</p>
+                        <a href="./note.html" class="btn btn-dark">Voir</a>
+                    </div>
+                </div> <!-- Liste des notes -->
+                <div class="d-flex justify-content-center mt-3">
+                    <nav aria-label="pagination">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> <!-- Pagination -->
+                <h2>Mes achats</h2>
+                <hr>
+                <div class="row gap-1 justify-content-center">
+                    <div class="col-3 m-2">
+                        <div
+                            class="border rounded mb-2 px-5 py-3 bg-light d-flex justify-content-center align-items-center">
+                            <a href="" class="btn"><i class="fas fa-download"></i></a>
+                        </div>
+                        <h6>Produit A</h6>
+                    </div> <!-- Produits -->
+                    <div class="col-3 m-2">
+                        <div
+                            class="border rounded mb-2 px-5 py-3 bg-light d-flex justify-content-center align-items-center">
+                            <a href="" class="btn"><i class="fas fa-download"></i></a>
+                        </div>
+                        <h6>Produit A</h6>
+                    </div> <!-- Produits -->
+                    <div class="col-3 m-2">
+                        <div
+                            class="border rounded mb-2 px-5 py-3 bg-light d-flex justify-content-center align-items-center">
+                            <a href="" class="btn"><i class="fas fa-download"></i></a>
+                        </div>
+                        <h6>Produit A</h6>
+                    </div> <!-- Produits -->
+                </div> <!-- Contenu User -->
+        </section>
+    </main>
 {% endblock %}
